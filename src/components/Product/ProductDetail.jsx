@@ -70,7 +70,7 @@ const ProductDetail = ({ data }) => {
         } else {
             setClick(false);
         }
-    }, [data, wishList]);
+    }, [data, wishList,dispatch]);
 
 
 
@@ -85,7 +85,7 @@ const ProductDetail = ({ data }) => {
                                 <img src={`${backend_URL}${data.images[select].public_id}`} className="w-[80%]" />
                                 <div className="w-full flex">
                                     <div className={`${select === 0 ? 'border' : 'null'} cursor-pointer`} >
-                                        <img src={`${backend_URL}${data?.images[0].public_id}`} alt=""
+                                        <img src={`${backend_URL}${data?.images[0].public_id}`} alt="product image"
                                             className="h-[200px]"
                                             onClick={() => setSelect(0)} />
 

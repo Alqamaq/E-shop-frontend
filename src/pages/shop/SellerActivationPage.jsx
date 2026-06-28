@@ -29,7 +29,7 @@ const SellerActivationPage = () => {
 
 
 
-    }, [])
+    }, [activationToken])
 
     return (
         <div

@@ -60,7 +60,7 @@ const ProductCard = ({ data }) => {
         } else {
             setClick(false);
         }
-    }, [wishList]);
+    }, [wishList,data._id]);
 
     return (
         <>

@@ -1,7 +1,6 @@
 import React from 'react'
 import DashboardHeader from '../../components/Shop/Layout/DashboardHeader'
 import DashboardSideBar from '../../components/Shop/Layout/DashboardSidebar.jsx'
-import Footer from '../../components/Layout/Footer'
 import ShopSetting from "../../components/Shop/ShopSetting.jsx";
 
 const ShopSettingPage = () => {

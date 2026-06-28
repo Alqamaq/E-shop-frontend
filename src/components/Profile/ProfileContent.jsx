@@ -4,14 +4,12 @@ import { CountrySelect } from 'react-country-state-city'
 import { deleteUserAddress, updateUserAddress } from '../../redux/actions/user.js';
 import { AiOutlineArrowRight, AiOutlineCamera, AiOutlineDelete } from 'react-icons/ai';
 import styles from '../../styles/styles.js'
-import { MdOutlineSignalWifiStatusbarNull, MdOutlineTrackChanges } from 'react-icons/md'
 import { useDispatch, useSelector } from 'react-redux'
 import { backend_URL } from '../../server'
 import { DataGrid } from "@mui/x-data-grid";
 import { Button } from "@mui/material";
 import { updateUserInformation } from '../../redux/actions/user.js';
 import { toast } from 'react-toastify'
-import { MdTrackChanges } from "react-icons/md";
 import { RxCross1 } from "react-icons/rx";
 import "react-country-state-city/dist/react-country-state-city.css";
 import axios from 'axios';
@@ -171,7 +169,7 @@ const AllOrder = () => {
 
     useEffect(()=>{
         dispatch(AllOrderOfUser(user._id))
-    },[])
+    },[dispatch])
     
    // console.log(orders)
    
@@ -263,7 +261,7 @@ const RefundAllOrder = () => {
       
     useEffect(()=>{
         dispatch(AllOrderOfUser(user._id))
-    },[])
+    },[dispatch])
 
     const columns = [
         { field: "id", headerName: "Order ID", minWidth: 150, flex: 0.7 },
@@ -352,7 +350,7 @@ const TrackAllOrder = () => {
 
     useEffect(()=>{
         dispatch(AllOrderOfUser(user._id))
-    },[])
+    },[dispatch])
     
    // console.log(orders)
    
@@ -466,7 +464,7 @@ const ChangePassword = () => {
             </h1>
             <div className="w-full">
                 <form
-                    aria-required
+                    required
                     onSubmit={passwordChangeHandler}
                     className="flex flex-col items-center"
                 >
@@ -584,7 +582,7 @@ const Address = () => {
                             Add New Address
                         </h1>
                         <div className="w-full">
-                            <form aria-required onSubmit={handleSubmit} className="w-full">
+                            <form required onSubmit={handleSubmit} className="w-full">
 
                                 <div className="w-full block p-4">
                                     <div className="w-full pb-2">

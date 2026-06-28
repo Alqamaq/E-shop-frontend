@@ -18,7 +18,7 @@ const BestSellingPage = () => {
        // const d = allProducts && allProducts.sort((a, b) => b.sold_out - a.sold_out);
         setData(allProducts)
 
-    })
+    },[allProducts])
 
     return (
         <div>
